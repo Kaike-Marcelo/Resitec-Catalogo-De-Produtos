@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": "c76a",
+      "name": "Manteiga",
+      "price": "1200"
+    },
+    {
+      "id": "dd2d",
+      "name": "Coca cola",
+      "price": "90.00"
+    },
+    {
+      "id": "006b",
+      "name": "Pepsi",
+      "price": "80.00"
+    },
+    {
+      "id": "e4bc",
+      "name": "",
+      "price": ""
+    },
+    {
+      "id": "2158",
+      "name": "",
+      "price": ""
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+    <mat-form-field>
+        <mat-label>Nome do Produto</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Preço</mat-label>
+        <input matInput formControlName="price">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Salvar</button>
+</form>
