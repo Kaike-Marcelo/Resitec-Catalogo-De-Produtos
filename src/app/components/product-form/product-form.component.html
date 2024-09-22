@@ -1,14 +1,18 @@
-<form [formGroup]="productForm" (ngSubmit)="saveProduct()">
-    <mat-form-field>
-        <mat-label>Nome do Produto</mat-label>
-        <input matInput formControlName="name">
-        <mat-error *ngIf="productForm.get('name')?.hasError('required')">O nome do produto é obrigatório.</mat-error>
-    </mat-form-field>
+<form class="form-product" [formGroup]="productForm" (ngSubmit)="saveProduct()">
+    <div class="form-input">
+        <mat-form-field>
+            <mat-label>Nome do Produto</mat-label>
+            <input matInput formControlName="name">
+            <mat-error *ngIf="productForm.get('name')?.hasError('required')">O nome do produto é
+                obrigatório.</mat-error>
+        </mat-form-field>
 
-    <mat-form-field>
-        <mat-label>Preço</mat-label>
-        <input matInput formControlName="price" appCurrencyFormat>
-    </mat-form-field>
+        <mat-form-field>
+            <mat-label>Preço</mat-label>
+            <input matInput formControlName="price" appCurrencyFormat>
+        </mat-form-field>
+    </div>
 
     <button mat-raised-button color="primary" type="submit">Salvar</button>
+
 </form>

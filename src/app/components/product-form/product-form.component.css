@@ -1,0 +1,34 @@
+.form-product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.form-product button {
+    width: 150px;
+    height: 55px;
+    font-size: large;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.form-input {
+    width: 80%;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .form-product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-input {
+        flex-direction: column;
+        width: 80%;
+    }
+
+}

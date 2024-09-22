@@ -6,14 +6,14 @@
       "id": "c76a"
     },
     {
-      "id": "dd2d",
       "name": "Coca cola",
-      "price": "90.00"
+      "price": "90.00",
+      "id": "dd2d"
     },
     {
-      "id": "006b",
       "name": "Pepsi",
-      "price": "80.00"
+      "price": "80.00",
+      "id": "006b"
     },
     {
       "name": "Melancia Doce",
@@ -21,9 +21,19 @@
       "id": "e4bc"
     },
     {
-      "id": "8356",
       "name": "Abóbora",
-      "price": "NaN"
+      "price": "12.00",
+      "id": "8356"
+    },
+    {
+      "name": "Berço",
+      "price": "12.90",
+      "id": "3786"
+    },
+    {
+      "name": "Carla",
+      "price": "1.00",
+      "id": "3019"
     }
   ]
 }

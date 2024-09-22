@@ -9,6 +9,7 @@ import { ProductService } from '../../services/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { DirectivesModule } from '../../directives/directives.module';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product-form',
@@ -32,7 +33,8 @@ export class ProductFormComponent {
     private fb: FormBuilder,
     private productService: ProductService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private snackBar: MatSnackBar
   ) {
     this.productForm = this.fb.group({
       name: ['', Validators.required],
@@ -57,21 +59,28 @@ export class ProductFormComponent {
     }
 
     const formValue = this.productForm.value;
-    formValue.price = this.parseCurrency(formValue.price).toString();
+    formValue.price = this.parseCurrency(formValue.price);
     if (this.productId != null) {
       this.productService.updateProduct(this.productId, this.productForm.value).subscribe(() => {
         this.router.navigate(['/products']);
+        this.snackBar.open('Produto atualizado com sucesso!', 'x', {
+          duration: 3000,
+        });
       });
     } else {
       this.productService.addProduct(this.productForm.value).subscribe(() => {
         this.router.navigate(['/products']);
+        this.snackBar.open('Produto adicionado com sucesso!', 'x', {
+          duration: 3000,
+        });
       });
     }
   }
 
   // Método para converter o valor do campo de preço para salvar no banco
-  private parseCurrency(value: string): number {
-    return parseFloat(value.replace(/[^\d,-]/g, '').replace(',', '.'));
+  private parseCurrency(value: string): string {
+    const numberValue = parseFloat(value.replace(/[^\d,-]/g, '').replace(',', '.'));
+    return numberValue.toFixed(2);
   }
 
   // Método para formatar o valor do campo de preço para a Interface
@@ -85,8 +94,11 @@ export class ProductFormComponent {
 
   // Método para formatar o valor como moeda
   private formatCurrency(value: string): string {
+    if (!value) return '';
     value = value.replace(/\D/g, '');
     const numberValue = parseFloat(value) / 100;
+    if (isNaN(numberValue)) return '';
+
     return numberValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   }
 }
