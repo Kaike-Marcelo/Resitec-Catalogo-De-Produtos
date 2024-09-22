@@ -1,9 +1,9 @@
 {
   "products": [
     {
-      "id": "c76a",
       "name": "Manteiga",
-      "price": "1200"
+      "price": "120.23",
+      "id": "c76a"
     },
     {
       "id": "dd2d",
@@ -16,14 +16,14 @@
       "price": "80.00"
     },
     {
-      "id": "e4bc",
-      "name": "",
-      "price": ""
+      "name": "Melancia Doce",
+      "price": "120000000001",
+      "id": "e4bc"
     },
     {
-      "id": "2158",
-      "name": "",
-      "price": ""
+      "id": "8356",
+      "name": "Abóbora",
+      "price": "NaN"
     }
   ]
 }
