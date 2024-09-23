@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 import { DirectivesModule } from '../../directives/directives.module';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+import { BrowserModule } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-product-form',
   standalone: true,

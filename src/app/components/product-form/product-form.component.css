@@ -1,7 +1,7 @@
 .form-product {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -13,6 +13,7 @@
 
 mat-form-field {
     width: 100%;
+    margin: 0 5px 0 0;
 }
 
 .form-input {
