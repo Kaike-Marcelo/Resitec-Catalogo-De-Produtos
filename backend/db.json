@@ -22,18 +22,13 @@
     },
     {
       "name": "Abóbora",
-      "price": "12.00",
+      "price": "120.00",
       "id": "8356"
     },
     {
-      "name": "Berço",
-      "price": "12.90",
-      "id": "3786"
-    },
-    {
-      "name": "Carla",
-      "price": "1.00",
-      "id": "3019"
+      "id": "925d",
+      "name": "Beterraba",
+      "price": "1.70"
     }
   ]
 }
